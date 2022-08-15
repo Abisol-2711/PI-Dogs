@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
+  "scripts": {  
     "start": "nodemon -L",
     "test": "mocha -w ./tests/**/*.spec.js"
   },
