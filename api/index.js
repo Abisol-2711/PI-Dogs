@@ -19,13 +19,10 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js'); 
 const { conn } = require('./src/db.js');
-const { PORT=3000, LOCAL_ADDRESS='0.0.0.0' } = process.env
 
 // Syncing all the models at once.
 conn.sync({ force: false }).then(() => {
-  server.listen(PORT, LOCAL_ADDRESS, () => {
+  server.listen(process.env.PORT || 3001, () => {
     console.log('%s listening at', address);
   });
 });
-
-// process.env.PORT || 3001
